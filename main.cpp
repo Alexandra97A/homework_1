@@ -67,6 +67,45 @@ int fib(int x) {
       return(fib(x-1)+fib(x-2));
    }
 }
+
+//Problem 4: multiplication
+void multiplication_table (int n_multiplication){
+    for (int i=0; i<= 10; i++) {
+        cout<< n_multiplication << " * "<< i <<" = "<<n_multiplication*i<<endl;
+    }
+}
+
+//Problem 5: truth table for 3 variables
+void truth_table_and(){
+    int a;
+    int b;
+    int c;
+
+    for(a=0;a<=1;++a){
+     for(b=0;b<=1;++b){
+      for(c=0;c<=1;++c){
+          cout<<a<<" "<<b<<" "<<c<<" "<<a*b*c<<endl;
+      }
+     }
+    }
+}
+
+void truth_table_or(){
+    int a;
+    int b;
+    int c;
+
+    for(a=0;a<=1;++a){
+     for(b=0;b<=1;++b){
+      for(c=0;c<=1;++c){
+         if(a==0 && b==0 && c==0)
+          cout<<a<<" "<<b<<" "<<c<<" "<<0<<endl;
+         else
+             cout<<a<<" "<<b<<" "<<c<<" "<<1<<endl;
+      }
+     }
+    }
+}
 int main()
 {
     cout << "Hello World!" << endl;
@@ -87,11 +126,13 @@ int main()
     cout<<fib(9);
 
     cout<<"Problem 4.................."<<endl;
-//    cout<<"Please enter the multiplication table of integers you require: ";
-//    cin>>n_multiplication;
+    multiplication_table (n_multiplication);
 
-    for (int i=0; i<= 10; i++) {
-        cout<< n_multiplication << " * "<< i <<" = "<<n_multiplication*i<<endl;
-    }
+    cout<<"Problem 5.................."<<endl;
+    cout<<"AND"<<endl;
+    truth_table_and();
+
+    cout<<endl<<"OR"<<endl;
+    truth_table_or();
     return 0;
 }
