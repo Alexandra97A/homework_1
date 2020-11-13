@@ -31,7 +31,14 @@ void computea_area_and_circumference (double radius) {
 /*
 void min_max_array(double *arr){
 
-        // returns the minimum value of array
+void min_max_array(double *arr, int len){
+    int  i;
+    double min = arr[0];
+    for (i=0; i < len; i++){
+        if(min > arr[i]){
+            min = arr[i];
+        }
+    }
 
         size_t i;
         double minimum = arr[0];
@@ -42,7 +49,14 @@ void min_max_array(double *arr){
         }
         return minimum;
 
-} */
+//Problem 3: Fibonacci
+int fib(int x) {
+    if ( (x == 1) || ( x==0 ) ) {
+      return(x);
+   } else {
+      return(fib(x-1)+fib(x-2));
+   }
+}
 int main()
 {
     cout << "Hello World!" << endl;
@@ -53,6 +67,14 @@ int main()
 
     cout<<"Problem 2..................."<<endl;
 
+    double arr[]={1,2,3,8,7};
+    int len = sizeof(arr)/sizeof(arr[0]);
+    min_max_array(arr, len);
+    cout<<endl;
 
+    cout<<"Problem 3.................."<<endl;
+    cout<<fib(9);
+
+     cout<<"Problem 4.................."<<endl;
     return 0;
 }
