@@ -46,8 +46,18 @@ void min_max_array(double *arr, int len){
             if (minimum > arr[i]) {
                 minimum = arr[i];
             }
+    double max = arr[0];
+    for (i=0; i < len; i++){
+        if(max < arr[i]){
+            max = arr[i];
         }
         return minimum;
+    }
+
+    cout<<"Minimum of the array: "<<min;
+    cout<<endl;
+    cout<<"Maximum of the array: "<<max;
+}
 
 //Problem 3: Fibonacci
 int fib(int x) {
@@ -61,20 +71,27 @@ int main()
 {
     cout << "Hello World!" << endl;
     double area_1 = area_circumference(10);
-
     double radius = 2;
-    computea_area_and_circumference(radius);
-
-    cout<<"Problem 2..................."<<endl;
 
     double arr[]={1,2,3,8,7};
     int len = sizeof(arr)/sizeof(arr[0]);
+
+    int n_multiplication = 7;
+    computea_area_and_circumference(radius);
+
+    cout<<"Problem 2..................."<<endl;
     min_max_array(arr, len);
     cout<<endl;
 
     cout<<"Problem 3.................."<<endl;
     cout<<fib(9);
 
-     cout<<"Problem 4.................."<<endl;
+    cout<<"Problem 4.................."<<endl;
+//    cout<<"Please enter the multiplication table of integers you require: ";
+//    cin>>n_multiplication;
+
+    for (int i=0; i<= 10; i++) {
+        cout<< n_multiplication << " * "<< i <<" = "<<n_multiplication*i<<endl;
+    }
     return 0;
 }
